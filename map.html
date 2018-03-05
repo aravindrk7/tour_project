@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html class = "animated fadeIn">
+<head>
+	<title>Tour | Map</title>
+	<link rel="stylesheet" type="text/css" href="css/animate.css">
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/map.css">
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAcMJESCDRMdbDsKR161tiQfXIu_R4y-pM&libraries=places&callback=initMap"
+    async defer></script>
+    
+</head>
+<body>
+	<script type="text/javascript" src="js/map.js"></script>
+	<div class = "container">
+		<nav>
+			<div class = "logo">LO<span>GO</span></div>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="about.html">About Website</a></li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+		</nav>
+		<section class = "background"></section>
+		<div class ="details">
+			<div id="map"></div>
+			<div class ="btn">
+				<a href=""><input type="button" value="Start Journey"></a>
+				<a href=""><input type="button" value="Replan"></a>
+				<a href="nearby.html"><input type="button" value="Nearby"></a>
+				<a href=""><input type="button" value="Bookings"></a>
+			</div>
+			<div id = "dis"></div>
+		</div>
+	</div>
+</body>
+</html>
