@@ -5,7 +5,9 @@ font-family: quicksand;
 
 src: url("../fonts/quicksand.otf");
 }
-
+*{
+	font-family: quicksand;
+}
 body{
 	margin: 0;
 	padding:0;
@@ -114,21 +116,32 @@ nav ul li a:hover{
 	border-radius: 6px; 
 }
 input[type = button]{
-	width: 90%;
+	width: 100%;
 	height: 50px;
 	margin-top: 10px;
 	margin-left: 5px;
 	border-radius: 6px;
+	outline: none;
+	cursor: pointer;
 	color: white;
 	border:none;
 	font-size: 16px;
 	background-color: #2a67f7;
 }
 select{
-	width: 90%;
+	width: 100%;
 	height: 50px;
+	outline: none;
 	margin-top: 10px;
-	margin-left: 5px;
 	border:none;
 	font-size: 16px;
+}
+
+#popPlace{
+	background:white;
+	color:black;
+	padding: 10px;
+	cursor: pointer;
+	border:solid 2px;
+	display: none;
 }

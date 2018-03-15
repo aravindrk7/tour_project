@@ -3,8 +3,42 @@
 <head>
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="css/test.css">
+<script>
+		var index=0;
+		var text=[
+		"Aravind",
+		"Arjun",
+		"Hasini",
+		"Suresh"];
+		var words=["jami","explore","mount","night"];
+		var elem;
+		var tex;
+		function wNext(){
+			index++;
+			elem.style.opacity = 0;
+			tex.style.opacity = 0;
+			if(index > (words.length - 1)){
+				index = 0;
+			}
+			setTimeout("wSlide()",1000);
+		}
+		function wSlide(){
+			elem.src= 'images/'+words[index]+'.jpg';
+			tex.innerHTML = text[index];
+			elem.style.opacity = 1;
+			tex.style.opacity = 1;
+			console.log(index);
+			setTimeout("wNext()",4500);
+		}
+	</script>
 </head>
 <body>
-<div class ="images"></div>
+	<center><div id= "text">Money</div></center>
+	<img id="change" src="" width="400" height="400"	>
+	<script type="text/javascript">
+		elem = document.getElementById('change');
+		tex = document.getElementById('text');
+		wNext(); 
+	</script>
 </body>
 </html>

@@ -5,26 +5,28 @@
 	<link rel="stylesheet" type="text/css" href="css/select.css">
 	<link rel="stylesheet" type="text/css" href="css/animate.css">
 </head>
-<body>
+<body>	
 	<div class = "container">
 		<nav>
 			<div class = "logo">LO<span>GO</span></div>
 			<ul>
 				<li><a href="index.html">Home</a></li>
 				<li><a href="about.html">About Website</a></li>
+				<li><a href="gallery.html">Gallery</a></li>
 				<li><a href="contact.html">Contact</a></li>
 			</ul>
 		</nav>
 		<section class = "background">
 		<div class = "details">
 			<a href="plan.html"><input type="button" name="" id ="replanButton" value= "Replan"></a>
-			<a href=""><input type="button" name="" id ="bookingButton" value= "Bookings"></a>
+			<input type="button" name="" id ="bookingButton" value= "Bookings" onclick="openPopup()">
 			<input type = "text" id = "start" placeholder = " type here...." value="tirunelveli">
 			<input type="text" id = place1 placeholder="palce 1" value="hosur">
 			<input type="text" id = place2 placeholder="palce 2" value="madurai">
 			<input type="text" id = place3 placeholder="palce 3" value="trichy">
 			<input type = "text" id = "end" placeholder = " type here...." value="chennai">
 			<a href="map.html"><input type="button" id="showbtn" value="Show in map" onclick="run()"></a>
+
 			<script>
 				function activatePlacesSearch(){
 					var start = document.getElementById('start');
@@ -54,5 +56,30 @@
 			<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAcMJESCDRMdbDsKR161tiQfXIu_R4y-pM&libraries=places&callback=activatePlacesSearch"></script>
 		</div> 	
 	</div>
+	<div class = "popupBg animated fadeIn" id="popbg">
+		<div class = "popupMain animated fadeInDownBig">
+			<div class ="popupClose animated fadeIn" onclick="closePopup()">
+				<p>
+					x
+				</p>
+			</div>
+			<h4>Select your mode of transport</h4>
+			<div class ="buttons">
+				<input type="button" name="" value="Bus"><br>
+				<input type="button" name="" value="Train"><br>
+				<input type="button" name="" value="Flight">
+			</div>			
+		</div>
+	</div>
+	<script type="text/javascript">
+		var popupBg = document.getElementById("popbg");
+		function openPopup(){
+			console.log("hello");
+			popupBg.style.display = "block"
+		}
+		function closePopup(){
+			popupBg.style.display = "none";
+		}
+	</script>
 </body>
 </html>

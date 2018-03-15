@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tour | Gallery</title>
+	<link rel="stylesheet" type="text/css" href="css/gallery.css">
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	<script type="text/javascript" src = "js/gallery.js"></script>
+	<script
+  			src="https://code.jquery.com/jquery-3.3.1.js"
+			integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  			crossorigin="anonymous">
+  	</script>
+	
+	<link rel="stylesheet" href="css/jquery.fancybox.css?v=2.1.7" type="text/css" media="screen" />
+<script type="text/javascript" src="js/jquery.fancybox.pack.js?v=2.1.7"></script>	
+	<script type="text/javascript">
+	$(document).ready(function() {
+		$(".fancybox").fancybox();
+	});
+</script>
+</head>
+<body>
+	<nav>
+			<div class = "logo">LO<span>GO</span></div>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="about.html">About Website</a></li>
+				<li><a href="gallery.html" class = "active">Gallery</a></li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+		</nav>
+	<section class = "search">
+				<div class = "searchBox">
+					<form>
+						<center><input type="text" id = "imgName" placeholder="Search for videos">
+						<input type="button" value="Search" onclick="run()"></center>
+					</form>
+					<br><br><br><br>
+				<div id = "videos"></div>
+				</div>
+
+	</section>
+	<div class = "popupBg animated fadeIn" id="popbg">
+		<div class = "popupMain animated fadeInDownBig">
+			<div class ="popupClose animated fadeIn" onclick="closePopup()">
+				<p>
+					x
+				</p>
+			</div>
+			<iframe id = "videoplayer" name="playhere" allowfullscreen></iframe>			
+		</div>
+	</div>
+	<script type="text/javascript">
+		var popupBg = document.getElementById("popbg");
+		function openPopup(){
+			console.log("hello");
+			popupBg.style.display = "block"
+		}
+		function closePopup(){
+			popupBg.style.display = "none";
+			$('#videoplayer').attr('src', '');
+		}
+	</script>
+</body>
+</html>

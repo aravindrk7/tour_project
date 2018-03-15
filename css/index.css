@@ -152,7 +152,7 @@ nav ul li a.active:hover{
 
 /** Video **/
 .video{
-	margin-top: 100px;
+	margin-top: 150px;
 	padding: 40px;
 	width: auto;
 	height: auto;
@@ -172,7 +172,7 @@ video:hover{
 /** Footer **/
 footer{
 	text-align: center;
-	background: #2a67f7;
+	background-color: rgba(0,0,0,.5);
 	color: white;
 	height: 20px;
 	padding: 20px;

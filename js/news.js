@@ -9,7 +9,8 @@ $(window).on('scroll', function(){
 var n;
 function news()
 {
-	var keyword=document.getElementById('keyword').value;
+	var keyword=localStorage.keyword;
+	console.log(keyword);
 	axios.get('https://newsapi.org/v2/everything',{
 		params:{
 			q:keyword,
@@ -26,9 +27,9 @@ function news()
 			//console.log(response.data.articles[i].urlToImage);
 			n=response.data.articles[i].title;
 			var div = document.getElementById('news');
-			div.innerHTML +='<img src="'+imagechange+'" width="100" height="100" alt="sorry no image for this news"></img>'+'<h1>'+
-							n+
-							'<br><br>';
+			div.innerHTML +='<div class = newsSec><img src="'+imagechange+'" width="100" height="100" alt="sorry no image for this news"></img>'
+						+'<div><h1>'+n+
+						'</h1><p>'+response.data.articles[i].description+'</p></div>'+ '<a href="'+response.data.articles[i].url+'" target="blank"><input type="button" id ="more" value= "see more"></a></div>';
 		}
 	})
 	.catch(function(error){

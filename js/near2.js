@@ -38,7 +38,6 @@ function nearby()
   var longi;
   var place = document.getElementById('slt').value;
   var type = document.getElementById('type').value; 
-  console.log(type);
   axios.get('https://maps.googleapis.com/maps/api/geocode/json',{
     params:{
       address:place,
@@ -47,7 +46,7 @@ function nearby()
   })
   .then(function(response){
     output=response;
-     lati =output.data.results[0].geometry.location.lat;
+    lati =output.data.results[0].geometry.location.lat;
     longi=output.data.results[0].geometry.location.lng;
     
 
@@ -71,7 +70,6 @@ function callback(results, status) {
       map.setCenter(pyrmont);
       map.setZoom(14);
       createMarker(results[i]);
-        console.log(results[i].name);
     }
   }
 }
@@ -82,11 +80,23 @@ function createMarker(place) {
           position: place.geometry.location
         });
 
-          google.maps.event.addListener(marker, 'click', function() {
-          infowindow.open(map, this);
-          infowindow.setContent(place.name);
-        });
-
+          google.maps.event.addListener(marker, 'click', getClickPosition, false);
+          function getClickPosition(e){
+          console.log(place.name);
+          var xPosition = event.clientX - 180;
+          var yPosition = event.clientY - 55;
+          placeDiv(xPosition, yPosition);
+        }
+          function placeDiv(x_pos, y_pos) {
+                  var d = document.getElementById('popPlace');
+                  d.style.position = "absolute";
+                  d.style.left = x_pos+'px';
+                  d.style.top = y_pos+'px';
+                  d.style.display = "block";
+                  console.log(d.style.left, d.style.top);
+                  var popPlace = `${place.name}`; 
+                  document.getElementById('popPlace').innerHTML  = popPlace;
+             }
 }
   })
   .catch(function(error){
@@ -94,3 +104,9 @@ function createMarker(place) {
   })  
  
 }
+function closediv()
+             {
+              console.log("clicked");
+                var d = document.getElementById('popPlace');
+                d.style.display = "none";
+             }

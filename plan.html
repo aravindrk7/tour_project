@@ -13,18 +13,16 @@
 			<ul>
 				<li><a href="index.html">Home</a></li>
 				<li><a href="about.html">About Website</a></li>
+				<li><a href="gallery.html">Gallery</a></li>
 				<li><a href="contact.html">Contact</a></li>
 			</ul>
 		</nav>
 		<section class = "background">
 		<div class = "details">
 			<form>
-				<input type="radio" name="category">Entertainment
-				<input type="radio" name="category">Bussiness
-				<input type="radio" name="category">Pilgrim<br><br>				
 				Select place
-				<select>
-					<option>Tamilnadu</option>
+				<select id = "state">
+					<option id >Tamilnadu</option>
 					<option>Kerala</option>
 					<option>Karnataka</option>
 					<option>Delhi</option>
@@ -37,8 +35,15 @@
 				<input type="date" name="toDate"><br>
 				Budget
 				<input type="text" name="" id = "budget" placeholder="budget"><br><br>
-				<a href="select.html"><input type="button" name="" id ="proceed" value= "submit"></a>
+				<a href="select.html"><input type="button" name="" id ="proceed" value= "submit" onclick="fix()"></a>
 			</form>	
+			<script type="text/javascript">
+				function fix(){
+						var e = document.getElementById("state");
+						var value = e.options[e.selectedIndex].value;
+						localStorage.keyword = value;
+			    }
+			</script>
 		</div> 	
 	</div>
 </body>

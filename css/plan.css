@@ -5,7 +5,9 @@ font-family: quicksand;
 
 src: url("../fonts/quicksand.otf");
 }
-
+*{
+	font-family: quicksand;
+}
 body{
 	margin: 0;
 	padding:0;
@@ -117,6 +119,7 @@ input[type = date],input[type = text]{
 input[type = button]{
 	background: #2a67f7;
 	height: 50px;
+	outline: none;
 	cursor: pointer;
 	border-radius: 6px;
 	color: white;
