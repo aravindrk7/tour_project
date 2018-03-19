@@ -99,7 +99,15 @@ direct();
 function direct()
 {	
 	ind =0;
-	var start = localStorage.start;
+	var retrievedData = localStorage.getItem("place");
+	var place = JSON.parse(retrievedData);
+
+	console.log(place);
+	for(var q=1;q<place.length;q++){
+		console.log(place[q]);
+		geocode(place[q]); 	
+	}
+	/*var start = localStorage.start;
 	var end =localStorage.end;
 	place[0]=localStorage.place1;
 	place[1]=localStorage.place2;
@@ -108,7 +116,7 @@ geocode(start);
 geocode(end);
 geocode(place[0]);
 geocode(place[1]);
-geocode(place[2]);
+geocode(place[2]);*/
 function geocode(area)
 {
 	var location=area;
@@ -140,8 +148,9 @@ function ad(f,g,h){
 	//geocode(place[0]);
 	//geocode(place[1]);
 	//geocode(place[2]);
-	for(var p=0;p<3;p++){
+	for(var p=1;p<localStorage.len;p++){
 	var a = place[p];
+	console.log(a);
 		items.push(a);
 	}
 	var waypoints = [];

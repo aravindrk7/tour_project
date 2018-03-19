@@ -132,6 +132,7 @@ nav ul li a.active:hover{
 	width: 100%;
 	font-size: 16px;
 	color: black;
+	transition:1s;
 }
 .contactBox input{
 	border: none;
@@ -164,7 +165,7 @@ nav ul li a.active:hover{
 	cursor: pointer;
 	border-radius: 6px;
 }.contactBox input[type = "submit"]:hover{
-	background-color: #4a7bef;
+	background: #1a17f7;
 }
 .contactBox a{
 	color: white;

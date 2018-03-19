@@ -15,6 +15,28 @@ body{
 	padding:0;
 	font-family: quicksand;
 }
+/** Logo **/
+
+.logo img{
+	margin-top: -20px;
+	margin-left: -60px;
+	height: 60px;
+	width: 90px;
+	transition: 1s;
+}
+.logo h5{
+	margin-top: -50px;
+	margin-left: 30px;
+	font-size: 20px;
+	height: 60px;
+	width: 90px;
+	transition: 1s;
+}
+
+.logo:hover img{
+	transform: rotateY(360deg);
+}
+
 
 /** Navigation Bar **/
 nav{
@@ -40,7 +62,7 @@ nav .logo{
 	font-size: 24px;
 	transition: .3s;
 }
-nav .logo span{
+nav .logo  h5 span{
 	color:#2a67f7;
 }
 nav.black .logo{

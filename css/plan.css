@@ -125,6 +125,15 @@ input[type = button]{
 	color: white;
 	font-size: 16px;
 }
+input[type = button]:hover{
+	height: 50px;
+	outline: none;
+	cursor: pointer;
+	border-radius: 6px;
+	background-color: #1a17f7;
+	color: white;
+	font-size: 16px;
+}
 ::-webkit-clear-button
 {
     display: none; /* Hide the button */

@@ -128,6 +128,10 @@ input[type = button]{
 	font-size: 16px;
 	background-color: #2a67f7;
 }
+input[type = button]:hover{
+	background: #1a17f7;
+}
+
 select{
 	width: 100%;
 	height: 50px;

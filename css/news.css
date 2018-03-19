@@ -15,6 +15,15 @@ body{
 	font-family: quicksand;
 }
 
+/** Logo **/
+
+.logo img{
+	margin-top: -20px;
+	margin-left: -60px;
+	height: 60px;
+	width: 90px;
+}
+
 /** Navigation Bar **/
 nav{
 	position: fixed;
@@ -134,4 +143,7 @@ input[type = button]{
 	color: white;
 	border:none;
 	font-size: 16px;
+}
+input[type = button]:hover{
+	background: #1a17f7;
 }

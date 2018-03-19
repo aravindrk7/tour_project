@@ -2,6 +2,7 @@ var youtube = 'https://www.youtube.com/embed/';
 function run(){
 	videos.innerHTML = '';
 	var imgName = document.getElementById('imgName').value;
+	imgName = imgName + "tourism";
 	axios.get('https://www.googleapis.com/youtube/v3/search?part=snippet',{
 		params:{
 			q:imgName,

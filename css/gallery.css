@@ -192,9 +192,10 @@ nav ul li a.active:hover{
 	background-color: #2a67f7;
 	cursor: pointer;
 	border-radius: 6px;
-}.searchBox input[type = "button"]:hover{
-	background-color: #4a7bef;
+}input[type = button]:hover{
+	background: #1a17f7;
 }
+
 .searchBox a{
 	color: white;
 	font-size: 18px;

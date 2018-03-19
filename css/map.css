@@ -127,8 +127,31 @@ input[type = button]{
 	font-size: 16px;
 	background-color: #2a67f7;
 }
-.dis h1{
-	font-size: 20px;
+input[type = button]:hover{
+	width: 90%;
+	height: 50px;
+	margin-top: 10px;
+	margin-left: 5px;
+	border-radius: 6px;
+	color: white;
+	border:none;
+	outline: none;
+	cursor: pointer;
+	font-size: 16px;
+	background: #1a17f7;
+}
+#dis{
+	background-color: rgba(255,255,255,.8);
+	border-radius: 6px;
+	padding: 20px;
+	margin-bottom: 25px;
+	margin-left: 20px;
+	margin-right: 20px;
+	color: black;
+}
+#dis h1{
+	font-size: 25px;
+	font-weight: bold;
 }
 
 
