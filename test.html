@@ -1,44 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html class = "animated fadeIn">
 <head>
-	<title></title>
-	<link rel="stylesheet" type="text/css" href="css/test.css">
-<script>
-		var index=0;
-		var text=[
-		"Aravind",
-		"Arjun",
-		"Hasini",
-		"Suresh"];
-		var words=["jami","explore","mount","night"];
-		var elem;
-		var tex;
-		function wNext(){
-			index++;
-			elem.style.opacity = 0;
-			tex.style.opacity = 0;
-			if(index > (words.length - 1)){
-				index = 0;
-			}
-			setTimeout("wSlide()",1000);
-		}
-		function wSlide(){
-			elem.src= 'images/'+words[index]+'.jpg';
-			tex.innerHTML = text[index];
-			elem.style.opacity = 1;
-			tex.style.opacity = 1;
-			console.log(index);
-			setTimeout("wNext()",4500);
-		}
-	</script>
+	<title>Tour | Map</title>
+	<link rel="stylesheet" type="text/css" href="css/animate.css">
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="test.css">
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAcMJESCDRMdbDsKR161tiQfXIu_R4y-pM&libraries=places&callback=initMap"
+    async defer></script>
+    <script type="text/javascript" src="test.js"></script>
 </head>
 <body>
-	<center><div id= "text">Money</div></center>
-	<img id="change" src="" width="400" height="400"	>
-	<script type="text/javascript">
-		elem = document.getElementById('change');
-		tex = document.getElementById('text');
-		wNext(); 
-	</script>
+	<div>
+		<input type="text" id="tex">
+		<input type="button" value="Submit" onclick="direct()">
+	</div>
+	<div id="map"></div>
 </body>
 </html>

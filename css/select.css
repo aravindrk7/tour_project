@@ -14,6 +14,19 @@ body{
 	font-family: quicksand;
 }
 
+/** Logo **/
+
+.logo img{
+	margin-top: -20px;
+	margin-left: -60px;
+	height: 60px;
+	width: 90px;
+	transition: 1s;
+}
+.logo:hover img{
+	transform: rotateY(360deg);
+}
+
 /** Navigation Bar **/
 nav{
 	position: fixed;
@@ -162,7 +175,7 @@ nav ul li a:hover{
 	transform: translate(-50%,-50%);	
 }
 header{
-	height: auto;
+	height: 400px;
 	max-height: 300px;
 	overflow-y: scroll;
 	overflow-x: hidden;

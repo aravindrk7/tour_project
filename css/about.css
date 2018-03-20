@@ -12,6 +12,20 @@ body{
 	font-family: quicksand;
 }
 
+/** Logo **/
+
+.logo img{
+	margin-top: -20px;
+	margin-left: -60px;
+	height: 60px;
+	width: 90px;
+	transition: 1s;
+}
+.logo:hover img{
+	transform: rotateY(360deg);
+}
+
+
 /** Navigation Bar **/
 nav{
 	position: fixed;
@@ -83,6 +97,18 @@ nav ul li a.active:hover{
 	border-radius:6px; 
 }
 
+#img1{
+	background-image: url('../images/lonely-boat.jpg');
+	background-size: cover;
+	animation : bgimg 40s ease infinite ;	
+}
+span{
+	font-size: 25px;
+}
+#big{
+	grid-column: 1/4;
+	height: auto;
+}
 /** About **/
 .about{
 	padding: 40px;
@@ -95,7 +121,7 @@ nav ul li a.active:hover{
 }
 .grid{
 	display: grid;
-	grid-template-columns: 30% 50% 15%;
+	grid-template-columns: 20% 55% 20%;
 	grid-gap: 20px;
 }
 .about h1{
@@ -110,4 +136,37 @@ nav ul li a.active:hover{
 	background-color: rgba(0,0,0,.5);
 	padding: 15px;
 	text-align: justify;
+}
+@keyframes bgimg{
+	20%{
+		background-image: url('../images/splash.jpg');
+		background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	}
+	40%{
+		background-image: url('../images/tree.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	}
+	60%{
+		background-image: url('../images/west.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	}
+	80%{
+		background-image: url('../images/tree.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	}
+	100%{
+		background-image: url('../images/jami.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	}
 }

@@ -24,15 +24,6 @@ body{
 	width: 90px;
 	transition: 1s;
 }
-.logo h5{
-	margin-top: -50px;
-	margin-left: 30px;
-	font-size: 20px;
-	height: 60px;
-	width: 90px;
-	transition: 1s;
-}
-
 .logo:hover img{
 	transform: rotateY(360deg);
 }

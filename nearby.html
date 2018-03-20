@@ -3,6 +3,11 @@
 <head>
 	<title>Tour | Nearby</title>
 	<link rel="stylesheet" type="text/css" href="css/animate.css">
+	<script
+  			src="https://code.jquery.com/jquery-3.3.1.js"
+			integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  			crossorigin="anonymous">
+  		</script>
 	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/nearby.css">
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAcMJESCDRMdbDsKR161tiQfXIu_R4y-pM&libraries=places&callback=initMap"
@@ -12,7 +17,7 @@
 <body>
 	<div class = "container">
 		<nav>
-			<div class = "logo">LO<span>GO</span></div>
+			<div class = "logo"><img src="images/lg.png"></div>
 			<ul>
 				<li><a href="index.html">Home</a></li>
 				<li><a href="about.html">About Website</a></li>
@@ -26,15 +31,41 @@
 				<div id = "dropdown"></div>
 				<div id = "neardrop">
 					<select id="type">
+						<option>airport</option>
+						<option>amusement_park</option>
+						<option>art_gallery</option>
+						<option>atm</option>
+						<option>bakery</option>
+						<option>cafe</option>
+						<option>car_repair</option>
+						<option>church</option>
+						<option>hindu_temple</option>
 						<option>hospital</option>
-						<option>mall</option>
+						<option>lodging</option>
+						<option>mosque</option>
+						<option>movie_theater</option>
+						<option>museum</option>
+						<option>park</option>
+						<option>parking</option>
+						<option>pharmacy</option>
+						<option>police</option>
+						<option>post_office</option>
+						<option>restaurant</option>
 						<option>school</option>
-						<option>temple</option>
+						<option>shopping_mall</option>
+						<option>stadium</option>
+						<option>supermarket</option>
+						<option>taxi_stand</option>
+						<option>zoo</option>
 					</select>
 				</div>
 				<input type="button" id = "weather" value="Nearby" onclick="nearby()">
-			</div>
 			<div id="map"></div>
+			<div id="list">
+				<a href="dis_near.html"><input type="button" value="Map this" id="mapThis" onclick="checkselect()"></a>
+			</div>
+			</div>
+			
 			<div id="popPlace" onclick="closediv()">
 			</div>
 		</div>

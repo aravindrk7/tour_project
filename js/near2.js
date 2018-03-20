@@ -37,6 +37,7 @@ function nearby()
   var lati;
   var longi;
   var place = document.getElementById('slt').value;
+  console.log(place);
   var type = document.getElementById('type').value; 
   axios.get('https://maps.googleapis.com/maps/api/geocode/json',{
     params:{
@@ -50,7 +51,7 @@ function nearby()
     longi=output.data.results[0].geometry.location.lng;
     
 
-console.log(place);
+
   var pyrmont = new google.maps.LatLng(lati,longi);
   var request = {
     location: pyrmont,
@@ -70,6 +71,12 @@ function callback(results, status) {
       map.setCenter(pyrmont);
       map.setZoom(14);
       createMarker(results[i]);
+      console.log(results[i].name);
+
+      //get list of checkbox for nearby result
+      var s = $('<input type="checkbox" name="res" class="chk" value="'+results[i].name+'" >    '+results[i].name+'</input><br>'); 
+      s.appendTo('#list');
+
     }
   }
 }
